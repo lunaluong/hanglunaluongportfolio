@@ -3,7 +3,7 @@
     font-family:MelHandwriting2-Regular;
 }
 body{
-    background-image: url(images/image1.jpg);
+    background-image: url(../images/image1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
