@@ -24,59 +24,6 @@
         margin: 10px 0;
     }
 
-    .photo-layout {
-        display: grid; /* Use grid layout */
-        grid-template-columns: 1fr; /* Single-column grid for small screens */
-        gap: 15px; /* Spacing between photos */
-        justify-items: center; /* Center-align items within the grid */
-    }
-
-    .photo {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: 400px; /* Set a reasonable max width */
-    }
-
-    .text-block {
-        margin: 16px auto;
-        padding: 16px;
-        width: 90%; /* Center-align and constrain width */
-        font-size: 1em;
-        text-align: center;
-    }
-
-    .text-block h3 {
-        font-size: 1.2em; /* Adjust heading size */
-    }
-
-    .text-block p {
-        font-size: 1em;
-        line-height: 1.6; /* Improve readability */
-    }
-
-    .container {
-        display: grid; /* Use grid for contact icons */
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Flexible columns */
-        gap: 15px;
-        justify-items: center; /* Center-align content */
-    }
-}
-
-/* Custom Font Settings */
-@font-face {
-    font-family: 'Lato';
-    src: url('fonts/Lato-Regular.ttf') format('truetype'); 
-    font-display: swap; /* Prevent invisible text during load */
-}
-
-/* Touch Interaction Adjustments */
-.hover-overlay {
-    display: none; /* Hide overlay on touch devices */
-}
-
-@media (hover: hover) {
-    .media-item:hover .hover-overlay {
-        opacity: 1; /* Restore hover effect for non-touch devices */
-    }
 }
 
 
