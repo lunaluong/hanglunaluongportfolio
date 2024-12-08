@@ -7,26 +7,85 @@
     font-family: 'MelHandwriting2-Regular';
     src: url('fonts/MelHandwriting2-Regular.ttf') format('truetype');
 }
-
-
-@media (max-width: 1024px) {
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
     body {
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 1em; /* Adjust base font size */
+        padding: 10px; /* Add padding for smaller screens */
     }
-    .container {
-        flex-direction: column;
-        padding: 20px;
+
+    h1 {
+        font-size: 2.5em; /* Scale headings for smaller screens */
     }
-}
-@supports (-webkit-appearance: none) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
+
+    .navbar {
+        position: static; /* Fix position for better stacking */
+        text-align: center; /* Center align items */
+    }
+
+    .navbar li {
+        display: block; /* Stack items vertically */
+        margin: 10px 0;
+    }
+
+    img, .photo {
+        width: 100%; /* Ensure images fit within container */
+    }
+
+    .text-block {
+        font-size: 1em; /* Adjust text size */
+        padding: 10px; /* Add spacing for readability */
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        gap: 15px;
     }
 }
 
+/* Safari Compatibility Fixes */
+.photo, .text-block {
+    -webkit-transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+}
+
+::selection {
+    background: rgb(1, 103, 1);
+    -webkit-background-clip: text; /* For Safari compatibility */
+    color: white; /* Adjust text color */
+}
+
+/* Ensure custom fonts work across all devices */
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype'); 
+    font-display: swap; /* Prevent invisible text during load */
+}
+
+/* Touch Interaction Adjustments */
+.hover-overlay {
+    display: none; /* Hide overlay on smaller screens */
+}
+
+@media (hover: hover) {
+    .media-item:hover .hover-overlay {
+        opacity: 1; /* Restore hover effect for non-touch devices */
+    }
+}
+
+/* Flexbox Bug Fix for Safari */
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+/* General Improvements for Smaller Screens */
+.text1, .text2, .text3, .text4 {
+    max-width: 90%; /* Limit text width */
+    word-wrap: break-word; /* Prevent overflow */
+}
 
 body {
     background-color: black;
