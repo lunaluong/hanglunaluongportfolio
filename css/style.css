@@ -9,7 +9,7 @@
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 500px){
     .navbar {
         position: static; 
         text-align: center; 
@@ -76,24 +76,6 @@
 @media (hover: hover) {
     .media-item:hover .hover-overlay {
         opacity: 1; /* Restore hover effect for non-touch devices */
-    }
-}
-
-/* Flexbox Bug Fix for Safari */
-.container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-}
-
-/* Specific Safari Workarounds */
-@supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .navbar {
-        display: flex;
-        width: 100vw; /* Full viewport width */
-        box-sizing: border-box; /* Prevent padding affecting width */
     }
 }
 
