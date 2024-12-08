@@ -38,6 +38,9 @@ h1 {
     padding: 0px;
     overflow: hidden;
     list-style-type: none;
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: flex-end; 
     
 }
 
@@ -563,12 +566,15 @@ h2{
     height: auto; /* Allow height to adapt */
     display: block; /* Stack items vertically */
     text-align: center;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items */
   }
 
   .navbar li {
     display: block; /* Stack items */
     margin: 10px 0; /* Add spacing between items */
     float: none; /* Remove float for stacking */
+    margin-left: 0; /* Remove spacing since items are stacked */
   }
 
   .navbar a {
