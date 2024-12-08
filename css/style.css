@@ -7,7 +7,8 @@
     font-family: 'MelHandwriting2-Regular';
     src: url('fonts/MelHandwriting2-Regular.ttf') format('truetype');
 }
-/* Media Queries for Mobile Devices */
+
+/* General Improvements for Smaller Screens */
 @media only screen and (max-width: 768px) {
     body {
         font-size: 1em; /* Adjust base font size */
@@ -20,26 +21,47 @@
 
     .navbar {
         position: static; /* Fix position for better stacking */
-        text-align: center; /* Center align items */
+        text-align: center; /* Center-align items */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
     }
 
     .navbar li {
-        display: block; /* Stack items vertically */
         margin: 10px 0;
     }
 
     img, .photo {
-        width: 100%; /* Ensure images fit within container */
+        width: 90%; /* Ensure images fit within container */
+        max-width: 400px; /* Set max width for photos */
+        margin-bottom: 16px; /* Add spacing between photos */
+    }
+
+    .photo-layout {
+        display: flex;
+        flex-direction: column; /* Stack photos vertically */
+        align-items: center;
     }
 
     .text-block {
+        margin: 16px auto;
+        padding: 16px; /* Add spacing for readability */
+        width: 90%; /* Center-align and constrain width */
         font-size: 1em; /* Adjust text size */
-        padding: 10px; /* Add spacing for readability */
+        text-align: center; /* Center-align text */
+    }
+
+    .text-block h3 {
+        font-size: 1.2em; /* Adjust heading size */
+    }
+
+    .text-block p {
+        font-size: 1em; /* Adjust paragraph size */
+        line-height: 1.6; /* Improve readability */
     }
 
     .media-grid {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
-        gap: 15px;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Add spacing between items */
     }
 }
 
@@ -50,11 +72,11 @@
 
 ::selection {
     background: rgb(1, 103, 1);
-    -webkit-background-clip: text; /* For Safari compatibility */
     color: white; /* Adjust text color */
+    -webkit-background-clip: text; /* For Safari compatibility */
 }
 
-/* Ensure custom fonts work across all devices */
+/* Custom Font Settings */
 @font-face {
     font-family: 'Lato';
     src: url('fonts/Lato-Regular.ttf') format('truetype'); 
@@ -63,7 +85,7 @@
 
 /* Touch Interaction Adjustments */
 .hover-overlay {
-    display: none; /* Hide overlay on smaller screens */
+    display: none; /* Hide overlay on touch devices */
 }
 
 @media (hover: hover) {
@@ -81,20 +103,16 @@
     align-items: flex-end;
 }
 
-/* General Improvements for Smaller Screens */
-.text1, .text2, .text3, .text4 {
-    max-width: 90%; /* Limit text width */
-    word-wrap: break-word; /* Prevent overflow */
-}
+/* Specific Safari Workarounds */
 @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     .navbar {
-        display: -webkit-box;
-        display: -webkit-flex;
         display: flex;
-        width: 100vw; /* Ensures full viewport width for Safari */
-        box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+        width: 100vw; /* Full viewport width */
+        box-sizing: border-box; /* Prevent padding affecting width */
     }
 }
+
+
 body {
     background-color: black;
     color: white;
