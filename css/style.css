@@ -551,10 +551,31 @@ h2{
 
 /* Adjustments for tablets (768px and below) */
 @media only screen and (max-width: 768px) {
+   .navbar {
+    position: relative; /* Allow better adaptability on small screens */
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
   .navbar ul {
-    display: flex;
-    flex-direction: column; /* Stack navigation items vertically */
-    align-items: center;
+    height: auto; /* Allow height to adapt */
+    display: block; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .navbar li {
+    display: block; /* Stack items */
+    margin: 10px 0; /* Add spacing between items */
+    float: none; /* Remove float for stacking */
+  }
+
+  .navbar a {
+    display: block; /* Ensure links take full width of their container */
+    text-align: center;
+    padding: 10px;
+    font-size: 1em; /* Adjust size for smaller screens */
   }
 
   .photo {
@@ -595,13 +616,27 @@ h2{
   .text-block {
     font-size: 0.9em; /* Further reduce text size */
   }
+.navbar {
+    padding: 5px;
+  }
 
-  .navbar ul {
-    padding: 0;
-    margin: 0;
+  .navbar a {
+    font-size: 0.9em; /* Slightly smaller text */
+    padding: 8px;
   }
 
   footer {
     font-size: 1em;
+  }
+}
+/* Safari-specific flexbox bug fixes */
+@supports (-webkit-appearance: none) {
+  .navbar ul {
+    display: -webkit-inline-box; /* Ensures inline layout works properly */
+  }
+
+  .navbar li {
+    display: inline-block;
+    float: none; /* Avoid float issues in Safari */
   }
 }
