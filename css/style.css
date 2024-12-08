@@ -8,20 +8,20 @@
     src: url('fonts/MelHandwriting2-Regular.ttf') format('truetype');
 }
 
-/* General Improvements for Smaller Screens */
-@media only screen and (max-width: 768px) {
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
     body {
         font-size: 1em; /* Adjust base font size */
         padding: 10px; /* Add padding for smaller screens */
     }
 
     h1 {
-        font-size: 2.5em; /* Scale headings for smaller screens */
+        font-size: 2.5em; /* Adjust heading size */
     }
 
     .navbar {
-        position: static; /* Fix position for better stacking */
-        text-align: center; /* Center-align items */
+        position: static;
+        text-align: center;
         display: flex;
         flex-direction: column; /* Stack items vertically */
     }
@@ -30,24 +30,24 @@
         margin: 10px 0;
     }
 
-    img, .photo {
-        width: 90%; /* Ensure images fit within container */
-        max-width: 400px; /* Set max width for photos */
-        margin-bottom: 16px; /* Add spacing between photos */
+    .photo-layout {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 1fr; /* Single-column grid for small screens */
+        gap: 15px; /* Spacing between photos */
+        justify-items: center; /* Center-align items within the grid */
     }
 
-    .photo-layout {
-        display: flex;
-        flex-direction: column; /* Stack photos vertically */
-        align-items: center;
+    .photo {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 400px; /* Set a reasonable max width */
     }
 
     .text-block {
         margin: 16px auto;
-        padding: 16px; /* Add spacing for readability */
+        padding: 16px;
         width: 90%; /* Center-align and constrain width */
-        font-size: 1em; /* Adjust text size */
-        text-align: center; /* Center-align text */
+        font-size: 1em;
+        text-align: center;
     }
 
     .text-block h3 {
@@ -55,25 +55,24 @@
     }
 
     .text-block p {
-        font-size: 1em; /* Adjust paragraph size */
+        font-size: 1em;
         line-height: 1.6; /* Improve readability */
     }
 
-    .media-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 15px; /* Add spacing between items */
+    .container {
+        display: grid; /* Use grid for contact icons */
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Flexible columns */
+        gap: 15px;
+        justify-items: center; /* Center-align content */
     }
-}
 
-/* Safari Compatibility Fixes */
-.photo, .text-block {
-    -webkit-transform: translate3d(0, 0, 0); /* Force hardware acceleration */
-}
+    form {
+        padding: 10px;
+    }
 
-::selection {
-    background: rgb(1, 103, 1);
-    color: white; /* Adjust text color */
-    -webkit-background-clip: text; /* For Safari compatibility */
+    form div {
+        margin-bottom: 10px;
+    }
 }
 
 /* Custom Font Settings */
