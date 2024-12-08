@@ -9,34 +9,16 @@
 }
 
 
-@media (max-width: 768px) {
-    .navbar {
-        position: static; 
-        text-align: center; 
-    }
-
-    .navbar ul {
-        display: block;
-    }
-
-    .navbar li {
-        display: block; 
-        margin: 10px 0;
-    }
-}
-
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     body {
         font-size: 16px;
         line-height: 1.5;
     }
-
     .container {
         flex-direction: column;
         padding: 20px;
     }
 }
-
 @supports (-webkit-appearance: none) {
     .container {
         display: grid;
@@ -50,6 +32,7 @@ body {
     background-color: black;
     color: white;
     font-family: 'Lato', sans-serif; 
+    box-sizing: border-box;
 }
 
 h1 {
