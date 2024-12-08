@@ -15,10 +15,13 @@ To set up the project locally:
    ```bash
    git clone https://github.com/lunaluong/hanglunaluongportfolio.git
 cd hanglunaluongportfolio
+
 npm install
+
 npm start
+
 ### Usage
-This project is a static website. Simply open the index.html file in a browser to view it.
+This project is a static website. Simply open the `index.html` file in a browser to view it.
 ### Credits
 MelHandwriting Font – Used for handwritten-like text.
 Lato Font (https://fonts.google.com) – Used for website typography.
