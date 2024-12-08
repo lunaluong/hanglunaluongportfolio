@@ -549,3 +549,59 @@ h2{
     padding-left: 365px;
 }
 
+/* Adjustments for tablets (768px and below) */
+@media only screen and (max-width: 768px) {
+  .navbar ul {
+    display: flex;
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center;
+  }
+
+  .photo {
+    width: 200px; /* Smaller image sizes */
+    margin: 10px auto;
+  }
+
+  .text-block {
+    font-size: 1em; /* Adjust text size */
+    padding: 10px;
+  }
+
+  #multicol {
+    columns: 1; /* Single column layout for smaller screens */
+    column-gap: 1em;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr; /* Single-column grid */
+  }
+}
+
+/* Adjustments for phones (425px and below) */
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 2em; /* Smaller header */
+  }
+
+  .watchhere_button {
+    font-size: 1em; /* Reduce button size */
+    padding: 10px 15px;
+  }
+
+  .photo {
+    width: 150px; /* Further reduce image size */
+  }
+
+  .text-block {
+    font-size: 0.9em; /* Further reduce text size */
+  }
+
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+}
