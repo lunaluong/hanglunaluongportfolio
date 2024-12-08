@@ -24,6 +24,7 @@ npm start
 This project is a static website. Simply open the `index.html` file in a browser to view it.
 ### Credits
 MelHandwriting Font – Used for handwritten-like text.
+
 Lato Font (https://fonts.google.com) – Used for website typography.
 # Contact 
 email: hpl7@duke.edu
