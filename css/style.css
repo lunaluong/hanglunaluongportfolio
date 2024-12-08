@@ -9,24 +9,18 @@
 }
 
 /* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1em; /* Adjust base font size */
-        padding: 10px; /* Add padding for smaller screens */
-    }
-
-    h1 {
-        font-size: 2.5em; /* Adjust heading size */
-    }
-
+@media (max-width: 768px) {
     .navbar {
-        position: static;
-        text-align: center;
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
+        position: static; 
+        text-align: center; 
+    }
+
+    .navbar ul {
+        display: block;
     }
 
     .navbar li {
+        display: block; 
         margin: 10px 0;
     }
 
@@ -64,14 +58,6 @@
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Flexible columns */
         gap: 15px;
         justify-items: center; /* Center-align content */
-    }
-
-    form {
-        padding: 10px;
-    }
-
-    form div {
-        margin-bottom: 10px;
     }
 }
 
