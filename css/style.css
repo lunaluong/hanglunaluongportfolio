@@ -86,7 +86,15 @@
     max-width: 90%; /* Limit text width */
     word-wrap: break-word; /* Prevent overflow */
 }
-
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .navbar {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        width: 100vw; /* Ensures full viewport width for Safari */
+        box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+    }
+}
 body {
     background-color: black;
     color: white;
