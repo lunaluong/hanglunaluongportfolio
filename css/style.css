@@ -554,7 +554,7 @@ h2{
 /* Adjustments for tablets (768px and below) */
 @media only screen and (max-width: 768px) {
    .navbar {
-    position: relative; /* Allow better adaptability on small screens */
+    position: relative; 
     top: 0;
     right: 0;
     padding: 10px;
@@ -562,10 +562,10 @@ h2{
   }
 
   .navbar ul {
-    height: auto; /* Allow height to adapt */
-    display: block; /* Stack items vertically */
+    height: auto; 
+    display: block; 
     text-align: center;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
     justify-content: center; 
   }
 
@@ -592,45 +592,46 @@ h2{
     grid-template-columns: 1fr; 
   }
   .photo-layout {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 8px;
     }
 
     .photo {
-        width: 48%; /* Two images per row */
-        margin-bottom: 10px;
-        border-radius: 8px;
+         width: 100%;
+        height: auto;
     }
 
     .text-block {
-        margin: 10px 5%;
-        text-align: center; /* Center-align text blocks */
-        font-size: 0.9em; /* Slightly smaller font size */
+        text-align: center; 
+        padding: 10px;
+        font-size: 0.9em; 
     }
 }
 
 /* Adjustments for phones (425px and below) */
 @media only screen and (max-width: 425px) {
   h1 {
-    font-size: 2em; /* Smaller header */
+    font-size: 2em; 
   }
 
   .watchhere_button {
-    font-size: 1em; /* Reduce button size */
+    font-size: 1em; 
     padding: 10px 15px;
   }
-
+.photo-layout {
+        grid-template-columns: 1fr; 
+    }
   .photo {
-    width: 150px; /* Further reduce image size */
+    width: 100%;
+    height: auto;
   }
 .navbar {
     padding: 5px;
   }
 
   .navbar a {
-    font-size: 0.9em; /* Slightly smaller text */
+    font-size: 0.9em; 
     padding: 8px;
   }
 
@@ -638,11 +639,11 @@ h2{
     font-size: 1em;
   }
     .text-block {
-        font-size: 0.8em; /* Adjust paragraph font size */
+        font-size: 0.8em; 
         margin: 10px;
     }
     .text-block h3 {
-        font-size: 1.2em; /* Slightly larger headings for readability */
+        font-size: 1.2em; 
     }
 }
 /* Safari-specific flexbox bug fixes */
