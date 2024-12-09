@@ -238,7 +238,7 @@ h2{
     width: 20%; 
     height: auto; 
     padding: 15px; 
-    line-height: 1.8; /* Increase line spacing for readability */
+    line-height: 1.8; 
     word-wrap: break-word; /* Prevent text overflow, I asked chatgpt */
  }
 .text3 { top: 200vh; left: 30vw; }
