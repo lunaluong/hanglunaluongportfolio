@@ -603,9 +603,9 @@ h2{
     }
 
     .photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7 {
-        position: absolute; /* Reset absolute positioning */
-        margin: 10px 0; /* Add spacing between elements */
-        max-width: 300px; /* Prevent excessive scaling */
+        position: absolute; 
+        margin: 10px 0; 
+        max-width: 300px; 
     }
 
     .text-block {
@@ -654,7 +654,7 @@ h2{
     .text-block h3 {
         font-size: 1.2em; 
     }
-     .photo1,
+    .photo1,
     .photo2,
     .photo3,
     .photo4,
