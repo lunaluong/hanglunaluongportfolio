@@ -566,41 +566,49 @@ h2{
     display: block; /* Stack items vertically */
     text-align: center;
     flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items */
+    justify-content: center; 
   }
 
   .navbar li {
-    display: block; /* Stack items */
-    margin: 10px 0; /* Add spacing between items */
-    float: none; /* Remove float for stacking */
-    margin-left: 0; /* Remove spacing since items are stacked */
+    display: block; 
+    margin: 10px 0; 
+    float: none; 
+    margin-left: 0; 
   }
 
   .navbar a {
-    display: block; /* Ensure links take full width of their container */
+    display: block; 
     text-align: center;
     padding: 10px;
-    font-size: 1em; /* Adjust size for smaller screens */
-  }
-
-  .photo {
-    width: 200px; /* Smaller image sizes */
-    margin: 10px auto;
-  }
-
-  .text-block {
-    font-size: 1em; /* Adjust text size */
-    padding: 10px;
+    font-size: 1em; 
   }
 
   #multicol {
-    columns: 1; /* Single column layout for smaller screens */
+    columns: 1; 
     column-gap: 1em;
   }
 
   .media-grid {
-    grid-template-columns: 1fr; /* Single-column grid */
+    grid-template-columns: 1fr; 
   }
+  .photo-layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .photo {
+        width: 48%; /* Two images per row */
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .text-block {
+        margin: 10px 5%;
+        text-align: center; /* Center-align text blocks */
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
 }
 
 /* Adjustments for phones (425px and below) */
@@ -617,10 +625,6 @@ h2{
   .photo {
     width: 150px; /* Further reduce image size */
   }
-
-  .text-block {
-    font-size: 0.9em; /* Further reduce text size */
-  }
 .navbar {
     padding: 5px;
   }
@@ -633,6 +637,13 @@ h2{
   footer {
     font-size: 1em;
   }
+    .text-block {
+        font-size: 0.8em; /* Adjust paragraph font size */
+        margin: 10px;
+    }
+    .text-block h3 {
+        font-size: 1.2em; /* Slightly larger headings for readability */
+    }
 }
 /* Safari-specific flexbox bug fixes */
 @supports (-webkit-appearance: none) {
