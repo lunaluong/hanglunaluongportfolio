@@ -592,9 +592,9 @@ h2{
     grid-template-columns: 1fr; 
   }
   .photo-layout {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 8px;
+        display: flex;
+        flex-direction: column; /* Stack photos naturally */
+        align-items: center; /* Center align the photos */
     }
 
     .photo {
@@ -602,39 +602,10 @@ h2{
         height: auto;
     }
 
-    .photo1 {
-        top: 10px;
-        left: 5px;
-    }
-
-    .photo2 {
-        top: 150px; 
-        right: 5px;
-    }
-
-    .photo3 {
-        top: 300px; 
-        left: 10px;
-    }
-
-    .photo4 {
-        top: 450px; 
-        left: 5px;
-    }
-
-    .photo5 {
-        top: 600px; 
-        right: 10px;
-    }
-
-    .photo6 {
-        top: 750px;
-        right: 5px;
-    }
-
-    .photo7 {
-        top: 900px;
-        right: 10px;
+    .photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7 {
+        position: relative; /* Reset absolute positioning */
+        margin: 10px 0; /* Add spacing between elements */
+        max-width: 300px; /* Prevent excessive scaling */
     }
 
     .text-block {
@@ -656,10 +627,13 @@ h2{
   }
 .photo-layout {
         grid-template-columns: 1fr; 
+        max-height: 80vh; 
+        overflow-y: auto; /* Enable scrolling */
     }
   .photo {
     width: 48%;
     height: auto;
+   
   }
 .navbar {
     padding: 5px;
@@ -689,6 +663,7 @@ h2{
     .photo7 {
         position: relative; 
         margin: 10px auto; 
+        max-width: 250px; 
     }
 }
 /* Safari-specific flexbox bug fixes */
