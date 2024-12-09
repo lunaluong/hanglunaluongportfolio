@@ -602,6 +602,41 @@ h2{
         height: auto;
     }
 
+    .photo1 {
+        top: 10px;
+        left: 5px;
+    }
+
+    .photo2 {
+        top: 150px; 
+        right: 5px;
+    }
+
+    .photo3 {
+        top: 300px; 
+        left: 10px;
+    }
+
+    .photo4 {
+        top: 450px; 
+        left: 5px;
+    }
+
+    .photo5 {
+        top: 600px; 
+        right: 10px;
+    }
+
+    .photo6 {
+        top: 750px;
+        right: 5px;
+    }
+
+    .photo7 {
+        top: 900px;
+        right: 10px;
+    }
+
     .text-block {
         text-align: center; 
         padding: 10px;
@@ -644,6 +679,16 @@ h2{
     }
     .text-block h3 {
         font-size: 1.2em; 
+    }
+     .photo1,
+    .photo2,
+    .photo3,
+    .photo4,
+    .photo5,
+    .photo6,
+    .photo7 {
+        position: relative; 
+        margin: 10px auto; 
     }
 }
 /* Safari-specific flexbox bug fixes */
