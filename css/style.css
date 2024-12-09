@@ -603,7 +603,7 @@ h2{
     }
 
     .photo1, .photo2, .photo3, .photo4, .photo5, .photo6, .photo7 {
-        position: relative; /* Reset absolute positioning */
+        position: absolute; /* Reset absolute positioning */
         margin: 10px 0; /* Add spacing between elements */
         max-width: 300px; /* Prevent excessive scaling */
     }
@@ -661,19 +661,19 @@ h2{
     .photo5,
     .photo6,
     .photo7 {
-        position: relative; 
+        position: absolute; 
         margin: 10px auto; 
         max-width: 250px; 
     }
 }
-/* Safari-specific flexbox bug fixes */
+/* Safari-specific flexbox bug fixes, credit to chatgpt */
 @supports (-webkit-appearance: none) {
   .navbar ul {
-    display: -webkit-inline-box; /* Ensures inline layout works properly */
+    display: -webkit-inline-box; 
   }
 
   .navbar li {
     display: inline-block;
-    float: none; /* Avoid float issues in Safari */
+    float: none; 
   }
 }
