@@ -598,7 +598,7 @@ h2{
     }
 
     .photo {
-         width: 100%;
+         width: 48%;
         height: auto;
     }
 
@@ -623,7 +623,7 @@ h2{
         grid-template-columns: 1fr; 
     }
   .photo {
-    width: 100%;
+    width: 48%;
     height: auto;
   }
 .navbar {
